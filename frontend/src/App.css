@@ -1,0 +1,100 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(3px + 2vmin);
+  color: black;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.register-text {
+  font-size: 15px;
+  color: black;
+  min-height: 8vh;
+}
+
+.register-text:hover {
+  text-decoration: underline;
+}
+
+.upload-image {
+  font-size: 12px;
+}
+
+.Status-text {
+  color: white;
+}
+
+.divWhite {
+  background-color: white;
+  padding: 100px;
+  border-radius: 0.5rem;
+  display: grid;
+  margin-bottom: 15px;
+}
+
+.photo {
+  justify-content: center;
+  display: grid;
+  vertical-align: top;
+  padding-bottom: 25px;
+}
+
+.messageAndLogOut {
+  color: black;
+  padding-bottom: 50px;
+  font-size: 30px;
+}
+
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  background-color: rgb(6 182 212);
+  color: white;
+  font-size: 25px;
+  border-radius: 0.25rem;
+  transition: all 0.2s;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: 20px;
+}
+
+.button:hover {
+  transform: scale(0.98);
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

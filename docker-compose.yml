@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  backend:
+    extends:
+      file: ./g7t2/docker-compose.yml
+      service: localstack
+    volumes:
+      - "./outputs.json:/usr/src/backend/outputs.json"
+  smtp:
+    extends:
+      file: ./g7t2/docker-compose.yml
+      service: smtp
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - "./outputs.json:/usr/src/app/outputs.json:ro"
+    entrypoint:
+      - ./await-backend.sh
+      - "backend:4566/restapis/g7t2API/prod/_user_request_/health"

@@ -1,0 +1,37 @@
+version: "3.8"
+
+services:
+  localstack:
+    build: .
+    ports:
+      - "4566:4566"
+      - "4567-4599:4567-4599"
+      - "7070:8080"
+    environment:
+      - DISABLE_CORS_CHECKS=1
+      - DOCKER_HOST=unix:///var/run/docker.sock
+      - HOSTNAME=localstack
+      - HOSTNAME_EXTERNAL=localstack
+      - LOCALSTACK_API_KEY=${LOCALSTACK_API_KEY-}
+      - LEGACY_DIRECTORIES=1
+      - SMTP_HOST=smtp
+      - SMTP_EMAIL="auth@g7t2.at"
+      - FRONTEND_URL=http://127.0.0.1:3000
+      - DEBUG=1
+    volumes:
+      - "~/localstack:/tmp/localstack"
+      - ".:/usr/src/backend"
+  smtp:
+    image: rnwood/smtp4dev:latest
+    ports:
+      - "2525:25"
+      - "3001:80"
+#  backend:
+#    container_name: "aws-backend"
+#    depends_on:
+#      - localstack
+#    build:
+#      context: .
+#      dockerfile: ./Dockerfile
+#    links:
+#      - localstack

@@ -1,0 +1,37 @@
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v3.2.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-added-large-files
+  - repo: https://github.com/pre-commit/mirrors-eslint
+    rev: v8.26.0
+    hooks:
+      - id: eslint
+        files: \.[jt]sx?$
+        additional_dependencies:
+          - eslint@8.22.0
+          - eslint-plugin-react@7.31.10
+          - eslint-plugin-prettier@4.2.1
+          - eslint-config-prettier@8.5.0
+          - "@typescript-eslint/eslint-plugin@5.41.0"
+  - repo: https://github.com/pre-commit/mirrors-prettier
+    rev: v2.7.1
+    hooks:
+      - id: prettier
+        additional_dependencies:
+          - prettier@2.7.1
+  - repo: https://github.com/psf/black
+    rev: "f67791427d2d10c4bc9e4932a51ebc51080871f9"
+    hooks:
+      - id: black
+  - repo: https://github.com/PyCQA/flake8
+    rev: "0acd10b881d9feeba691620d1f217df2dee4cd0d"
+    hooks:
+      - id: flake8
+        args: ["--config=g7t2/.flake8"]
+        files: g7t2/.*\.py$

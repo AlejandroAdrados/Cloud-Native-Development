@@ -2,7 +2,7 @@
 
 # Advanced Internet Computing WS 2022 - Group 7 Topic 2
 
-## Overview
+## Overview 👀
 
 The aim of this project was to implement a minimal e-learning platform using a modern serverless architecture and state of the art cloud services. From a user perspective the following major use cases are provided by our platform:
 
@@ -14,7 +14,7 @@ The aim of this project was to implement a minimal e-learning platform using a m
 
 4.  **Get Profile**: A user can check his/her profile, which includes a grade for every type of exercise. This graded is a result of the number of correct and incorrect answers of a user.
 
-## Team
+## Team 💬
 
 - Guillermo Grande: e12202288@student.tuwien.ac.at
 
@@ -26,7 +26,7 @@ The aim of this project was to implement a minimal e-learning platform using a m
 
 - Jakob Aichinger: e11814579@student.tuwien.ac.at
 
-## Prerequisites
+## Prerequisites 🌀
 
 - [Python3](https://www.python.org/downloads/)
 
@@ -42,7 +42,7 @@ Also, you need to set a valid **localstack pro key** in your environment variabl
 export LOCALSTACK_API_KEY=YOUR_KEY
 ```
 
-## How to run
+## How to run ▶️
 
 Run the docker-compose with:
 
@@ -63,7 +63,7 @@ This project uses email verification for new registrations. For convenience, a l
 
 Have Fun :smile:
 
-## How we tested
+## How we tested ✔️
 
 For testing we setup a pipeline, which handles the build of our project (frontend and backend service), automatic unit testing and linting of the code. This pipeline runs on a Oracle free tier Cloud Server with the following specifications:
 
@@ -77,7 +77,7 @@ Originally we tried to use the free tier aws micro-instance, however due to the 
 
 Additionally, to the pipeline the project was tested locally on every team members machine, which includes the three major operating systems linux, mac os, and windows.
 
-## Architecture
+## Architecture 🏰
 
 ### Services
 
@@ -127,7 +127,7 @@ We use a single table called 'assignments' which stores the following three obje
 
 The idea was that by using two separate lists it is easily possible to verify the number of assignments left.
 
-## How to develop
+## How to develop 🚀
 
 Requires:
 
